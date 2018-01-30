@@ -11,15 +11,11 @@ namespace BilletLib
        private string _nummerplade;
        private DateTime _dato;
 
-       public string Nummerplade
-       {
-           get
-           {
-               return _nummerplade;
-           }
-       }
+       public string Nummerplade { get {return _nummerplade;} }
+       public DateTime Dato { get { return _dato; } }
 
-       public MC(string nummerplade, DateTime dato)
+
+        public MC(string nummerplade, DateTime dato)
        {
            if (nummerplade.Length > 7)
            {
@@ -29,7 +25,6 @@ namespace BilletLib
            _dato = dato;    
        }
 
-       public DateTime Dato { get { return _dato; } }
 
 
        public override string Køretøj()

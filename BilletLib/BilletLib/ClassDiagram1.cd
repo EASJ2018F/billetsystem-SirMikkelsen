@@ -14,5 +14,12 @@
       <FileName>MC.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="BilletLib.Kørertøj" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAA=</HashCode>
+      <FileName>Kørertøj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

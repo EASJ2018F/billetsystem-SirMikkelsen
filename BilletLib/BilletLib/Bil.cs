@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,5 +44,17 @@ namespace BilletLib
         {
                  return 240;
         }
+
+
+        
+        //public override double RabbatKøb()
+        //{
+        //    bool brobiz = true;
+
+        //    if ( == brobiz)
+        //    {
+                
+        //    }
+        //}
     }
 }
