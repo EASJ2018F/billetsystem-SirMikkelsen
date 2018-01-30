@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="BilletLib.Bil">
-    <Position X="3" Y="2" Width="1.5" />
+    <Position X="3.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEABCBAAEQAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEARCBAAAQAAAAAA=</HashCode>
       <FileName>Bil.cs</FileName>
     </TypeIdentifier>
   </Class>

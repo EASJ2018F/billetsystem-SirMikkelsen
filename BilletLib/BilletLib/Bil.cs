@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilletLib
 {
-    public class Bil
+    public class Bil : Kørertøj
     {
         private string _nummerplade;
         private DateTime _dato;
@@ -15,14 +15,15 @@ namespace BilletLib
         
         public DateTime Dato { get { return _dato; } }
 
-        public int Pris()
-        {
-            return 240;
-        }
 
-        public string Køretøj()
+        public override string Køretøj()
         {
             return "Bil";
+        }
+
+        public override int Pris()
+        {
+                 return 240;
         }
     }
 }
