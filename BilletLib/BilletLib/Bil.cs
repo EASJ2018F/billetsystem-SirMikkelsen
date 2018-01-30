@@ -20,7 +20,7 @@ namespace BilletLib
             return 240;
         }
 
-        public string køretøj()
+        public string Køretøj()
         {
             return "Bil";
         }

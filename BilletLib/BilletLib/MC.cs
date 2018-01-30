@@ -9,10 +9,10 @@ namespace BilletLib
    public class MC
    {
        private string _nummerplade;
-       private DateTime _dateTime;
+       private DateTime _dato;
 
        public string Nummerplade { get { return _nummerplade; } }
-       public DateTime DateTime { get { return _dateTime; } }
+       public DateTime Dato { get { return _dato; } }
 
        public int Pris()
        {

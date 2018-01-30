@@ -30,7 +30,7 @@ namespace BilletLib.Tests
             Bil b2 = new Bil();
             string expectedResult = "Bil";
             // Act
-            var actualResult = b2.køretøj();
+            var actualResult = b2.Køretøj();
             //  Asset
             Assert.AreEqual(expectedResult, actualResult);
         }
