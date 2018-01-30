@@ -11,7 +11,24 @@ namespace BilletLib
        private string _nummerplade;
        private DateTime _dato;
 
-       public string Nummerplade { get { return _nummerplade; } }
+       public string Nummerplade
+       {
+           get
+           {
+               return _nummerplade;
+           }
+       }
+
+       public MC(string nummerplade, DateTime dato)
+       {
+           if (nummerplade.Length > 7)
+           {
+               throw new ArgumentException("Nummerplade mmå have maks 7 tegn!");
+            }
+           _nummerplade = nummerplade;
+           _dato = dato;    
+       }
+
        public DateTime Dato { get { return _dato; } }
 
 

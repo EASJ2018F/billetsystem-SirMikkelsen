@@ -15,7 +15,7 @@ namespace BilletLib.Tests
         public void PrisTest()
         {
             // Arrange 
-            MC mc1 = new MC();
+            MC mc1 = new MC("1234", DateTime.Today);
             int expectedResult = 125;
             
             // Act
@@ -30,7 +30,7 @@ namespace BilletLib.Tests
         public void KøretøjTest()
         {
             // Arrange
-            MC mc1 = new MC();
+            MC mc1 = new MC("12345", DateTime.Today);
             string expectedResult = "MC";
 
             // Act

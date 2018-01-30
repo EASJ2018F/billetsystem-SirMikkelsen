@@ -2,7 +2,9 @@
 using BilletLib;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.SymbolStore;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +17,7 @@ namespace BilletLib.Tests
         public void PrisTest()
         {
             // Arrange
-            Bil b1 = new Bil();
+            Bil b1 = new Bil("1234", DateTime.Today);
             int expectedResult = 240;
             // Act
             var actualResult = b1.Pris();
@@ -27,12 +29,24 @@ namespace BilletLib.Tests
         public void KøretøjTest()
         {
             // Arrange
-            Bil b2 = new Bil();
+            Bil b2 = new Bil("12345", DateTime.Today);
             string expectedResult = "Bil";
             // Act
             var actualResult = b2.Køretøj();
             //  Asset
             Assert.AreEqual(expectedResult, actualResult);
+        }
+
+
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException),
+            "Nummerplade er for lang")]
+        public void NummerpladeForLangException()
+        {
+           // Arrange
+           Bil b3 = new Bil("123456789", DateTime.Today);
+
         }
     }
 }
