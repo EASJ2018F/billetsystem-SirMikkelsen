@@ -38,7 +38,8 @@ namespace BilletLib.Tests
         }
 
 
-
+        // Metode jeg fandt ,som er den eneste der virke når der bliver kastet en exceptiom
+        // Forstår den ikke helt?
         [TestMethod]
         [ExpectedException(typeof(ArgumentException),
             "Nummerplade er for lang")]
