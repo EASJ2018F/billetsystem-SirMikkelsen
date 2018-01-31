@@ -48,7 +48,7 @@ namespace BilletLib
                 return (result - femprocentRabat);
             }
 
-            if (_dato.DayOfWeek == DayOfWeek.Saturday || _dato.DayOfWeek == DayOfWeek.Sunday && _brobizz == true)
+            if (_dato.DayOfWeek == DayOfWeek.Wednesday || _dato.DayOfWeek == DayOfWeek.Sunday)
             {
                return (result - tyveprocenRabat) - femprocentRabat;
 

@@ -44,7 +44,7 @@ namespace BilletLib.Tests
         {
            // Arrange
 
-           Bil b3 = new Bil("1234", DateTime.Today, true);
+           Bil b3 = new Bil("1234", DateTime.Today, false);
             int expectedResult = 190;
            // Act
             var actualResult = b3.Pris();
