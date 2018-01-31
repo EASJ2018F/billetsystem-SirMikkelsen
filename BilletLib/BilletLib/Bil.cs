@@ -11,19 +11,14 @@ namespace BilletLib
     {
         private string _nummerplade;
         private DateTime _dato;
+        private bool _brobizz;
 
-        public String NummerPlade
-        {
-            get
-            {
-                return _nummerplade;
 
-            }
-        }
-
+        public string Nummerplade { get { return _nummerplade; }}
+        public bool Brobizz { get { return _brobizz;} }
         public DateTime Dato { get { return _dato; } }
 
-        public Bil(string nummerplade, DateTime dato)
+        public Bil(string nummerplade, DateTime dato, bool brobizz)
         {
             if (nummerplade.Length > 7)
             {
@@ -32,6 +27,7 @@ namespace BilletLib
 
             _nummerplade = nummerplade;
             _dato = dato;
+            _brobizz = brobizz;
         }
 
 
@@ -42,19 +38,16 @@ namespace BilletLib
 
         public override int Pris()
         {
-                 return 240;
+            int trækprocent = 5 * Convert.ToInt32(2.4);
+            int result = 240;
+
+            if (_brobizz == false)
+            {
+                return result;
+            }
+
+            return (result - trækprocent);
+
         }
-
-
-        
-        //public override double RabbatKøb()
-        //{
-        //    bool brobiz = true;
-
-        //    if ( == brobiz)
-        //    {
-                
-        //    }
-        //}
     }
 }

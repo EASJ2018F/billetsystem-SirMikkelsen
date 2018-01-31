@@ -16,7 +16,7 @@ namespace BilletLib
 
 
         public MC(string nummerplade, DateTime dato)
-       {
+        {
            if (nummerplade.Length > 7)
            {
                throw new ArgumentException("Nummerplade mmå have maks 7 tegn!");
@@ -25,16 +25,14 @@ namespace BilletLib
            _dato = dato;    
        }
 
-
-
        public override string Køretøj()
        {
            return "MC";
-        }
+       }
 
        public override int Pris()
        {
            return 125;
-        }
+       }
    }
 }

@@ -17,10 +17,23 @@ namespace BilletLib.Tests
         public void PrisTest()
         {
             // Arrange
-            Bil b1 = new Bil("1234", DateTime.Today);
+            Bil b1 = new Bil("1234", DateTime.Today, false);
             int expectedResult = 240;
             // Act
             var actualResult = b1.Pris();
+            // Asset
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+
+        [TestMethod]
+        public void RabatTest()
+        {
+            // Arrange
+            Bil b2 = new Bil("1234", DateTime.Today, true);
+            int expectedResult = 230;
+            // Act
+            var actualResult = b2.Pris();
             // Asset
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -29,16 +42,16 @@ namespace BilletLib.Tests
         public void KøretøjTest()
         {
             // Arrange
-            Bil b2 = new Bil("12345", DateTime.Today);
+            Bil b3 = new Bil("12345", DateTime.Today, false);
             string expectedResult = "Bil";
             // Act
-            var actualResult = b2.Køretøj();
+            var actualResult = b3.Køretøj();
             //  Asset
             Assert.AreEqual(expectedResult, actualResult);
         }
 
 
-        // Metode jeg fandt ,som er den eneste der virker når der bliver kastet en exceptiom
+        // Metode jeg fandt ,som er den eneste der virker når der bliver kastet en exception
         // Forstår den ikke helt?
         [TestMethod]
         [ExpectedException(typeof(ArgumentException),
@@ -46,8 +59,9 @@ namespace BilletLib.Tests
         public void NummerpladeForLangException()
         {
            // Arrange
-           Bil b3 = new Bil("123456789", DateTime.Today);
+           Bil b4 = new Bil("123456789", DateTime.Today, false);
 
         }
+
     }
 }
