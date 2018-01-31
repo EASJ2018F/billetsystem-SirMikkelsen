@@ -11,10 +11,7 @@ namespace BilletLib
        public abstract string Køretøj();
        public abstract int Pris();
 
-       public virtual double RabbatKøb()
-       {
-           return 0.0;
-       }
+      
        
    }
 }

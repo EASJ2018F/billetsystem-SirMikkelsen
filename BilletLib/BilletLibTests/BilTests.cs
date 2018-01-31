@@ -14,7 +14,7 @@ namespace BilletLib.Tests
     public class BilTests
     {
         [TestMethod()]
-        public void PrisTest()
+        public void PrisForBilTest()
         {
             // Arrange
             Bil b1 = new Bil("1234", DateTime.Today, false);
@@ -27,7 +27,7 @@ namespace BilletLib.Tests
 
 
         [TestMethod]
-        public void RabatTest()
+        public void RabatForBilTest()
         {
             // Arrange
             Bil b2 = new Bil("1234", DateTime.Today, true);
@@ -39,7 +39,7 @@ namespace BilletLib.Tests
         }
 
         [TestMethod()]
-        public void KøretøjTest()
+        public void KøretøjForBilTest()
         {
             // Arrange
             Bil b3 = new Bil("12345", DateTime.Today, false);
@@ -56,7 +56,7 @@ namespace BilletLib.Tests
         [TestMethod]
         [ExpectedException(typeof(ArgumentException),
             "Nummerplade er for lang")]
-        public void NummerpladeForLangException()
+        public void NummerpladeForLangForBilException()
         {
            // Arrange
            Bil b4 = new Bil("123456789", DateTime.Today, false);

@@ -12,7 +12,7 @@ namespace BilletLib.Tests
     public class MCTests
     {
         [TestMethod()]
-        public void PrisTest()
+        public void PrisForMCTest()
         {
             // Arrange 
             MC mc1 = new MC("1234", DateTime.Today);
@@ -27,14 +27,14 @@ namespace BilletLib.Tests
         }
 
         [TestMethod()]
-        public void KøretøjTest()
+        public void KøretøjForMCTest()
         {
             // Arrange
-            MC mc1 = new MC("12345", DateTime.Today);
+            MC mc2 = new MC("12345", DateTime.Today);
             string expectedResult = "MC";
 
             // Act
-            var actualResult = mc1.Køretøj();
+            var actualResult = mc2.Køretøj();
 
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
