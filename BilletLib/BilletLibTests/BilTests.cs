@@ -38,28 +38,42 @@ namespace BilletLib.Tests
             Assert.AreEqual(expectedResult, actualResult);
         }
 
+
+        [TestMethod]
+        public void WeekendRabatForBilTest()
+        {
+           // Arrange
+
+           Bil b3 = new Bil("1234", DateTime.Today, false);
+            int expectedResult = 190;
+           // Act
+            var actualResult = b3.Pris();
+          //  Asset
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
         [TestMethod()]
         public void KøretøjForBilTest()
         {
             // Arrange
-            Bil b3 = new Bil("12345", DateTime.Today, false);
+            Bil b4 = new Bil("12345", DateTime.Today, false);
             string expectedResult = "Bil";
             // Act
-            var actualResult = b3.Køretøj();
+            var actualResult = b4.Køretøj();
             //  Asset
             Assert.AreEqual(expectedResult, actualResult);
         }
 
 
-        // Metode jeg fandt ,som er den eneste der virker når der bliver kastet en exception
+        //Metode jeg fandt ,som er den eneste der virker når der bliver kastet en exception
         // Forstår den ikke helt?
         [TestMethod]
         [ExpectedException(typeof(ArgumentException),
             "Nummerplade er for lang")]
         public void NummerpladeForLangForBilException()
         {
-           // Arrange
-           Bil b4 = new Bil("123456789", DateTime.Today, false);
+            // Arrange
+            Bil b4 = new Bil("123456789", DateTime.Today, false);
 
         }
 

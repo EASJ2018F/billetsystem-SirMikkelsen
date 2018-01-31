@@ -38,15 +38,24 @@ namespace BilletLib
 
         public override int Pris()
         {
-            int trækprocent = 5 * Convert.ToInt32(2.4);
+
+            int tyveprocenRabat = 20 * Convert.ToInt32(2.4);
+            int femprocentRabat = 5 * Convert.ToInt32(2.4);
             int result = 240;
 
-            if (_brobizz == false)
+            if (_brobizz == true)
             {
-                return result;
+                return (result - femprocentRabat);
             }
 
-            return (result - trækprocent);
+            if (_dato.DayOfWeek == DayOfWeek.Saturday || _dato.DayOfWeek == DayOfWeek.Sunday)
+            {
+               return (result - tyveprocenRabat) - femprocentRabat;
+
+            }
+
+            return result;
+
 
         }
     }
