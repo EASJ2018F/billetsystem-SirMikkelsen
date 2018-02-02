@@ -9,7 +9,7 @@ namespace BilletLib
   public abstract class Kørertøj
    {
        public abstract string Køretøj();
-       public abstract int Pris();
+       public abstract int Pris(bool weeekend);
 
        
    }

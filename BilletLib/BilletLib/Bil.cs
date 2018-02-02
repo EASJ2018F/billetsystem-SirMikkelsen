@@ -12,13 +12,15 @@ namespace BilletLib
         private string _nummerplade;
         private DateTime _dato;
         private bool _brobizz;
+        private bool _øresund;
 
 
         public string Nummerplade { get { return _nummerplade; }}
         public bool Brobizz { get { return _brobizz;} }
         public DateTime Dato { get { return _dato; } }
+        public bool Øresund { get { return _øresund; } }
 
-        public Bil(string nummerplade, DateTime dato, bool brobizz)
+        public Bil(string nummerplade, DateTime dato, bool brobizz , bool øresund)
         {
             if (nummerplade.Length > 7)
             {
@@ -28,35 +30,58 @@ namespace BilletLib
             _nummerplade = nummerplade;
             _dato = dato;
             _brobizz = brobizz;
+            _øresund = øresund;
         }
 
 
         public override string Køretøj()
         {
+            if (_øresund == true)
+            {
+                return "Øresund Bil";
+            }
+
             return "Bil";
         }
 
-        public override int Pris()
+        
+
+        public override int Pris(bool weeekend = false)
         {
 
             int tyveprocenRabat = 20 * Convert.ToInt32(2.4);
             int femprocentRabat = 5 * Convert.ToInt32(2.4);
             int result = 240;
+            int result2 = 410;
+
+            if (weeekend)
+            {
+               result=  result - tyveprocenRabat;
+
+            }
 
             if (_brobizz == true)
             {
-                return (result - femprocentRabat);
+                result = result - femprocentRabat;
             }
 
-            if (_dato.DayOfWeek == DayOfWeek.Wednesday || _dato.DayOfWeek == DayOfWeek.Sunday)
-            {
-               return (result - tyveprocenRabat) - femprocentRabat;
 
+            if (_øresund)
+            {
+                result = result2;
+            }
+
+            if (_øresund && _brobizz == true)
+            {
+                result = 161;
             }
 
             return result;
 
-
         }
+
+     
+
+   
     }
 }

@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="BilletLib.Bil">
-    <Position X="3.25" Y="2" Width="1.5" />
+    <Position X="15" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEARCBAAAQAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAEAQCBAAgQAAAAAA=</HashCode>
       <FileName>Bil.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BilletLib.MC">
-    <Position X="5.5" Y="2" Width="1.5" />
+    <Position X="17.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQCBAAAQAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAEAQCBAAgQAAAAAA=</HashCode>
       <FileName>MC.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BilletLib.Kørertøj" Collapsed="true">
-    <Position X="4.25" Y="0.5" Width="1.5" />
+    <Position X="16" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAA=</HashCode>
       <FileName>Kørertøj.cs</FileName>
     </TypeIdentifier>
   </Class>
