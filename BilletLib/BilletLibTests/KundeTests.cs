@@ -15,16 +15,20 @@ namespace BilletLib.Tests
         [TestMethod()]
         public void TotalPrisTest()
         { 
+            //Arrange
             List<Kørertøj> kørertøj = new List<Kørertøj>();
 
             kørertøj.Add(new MC("1234", new DateTime(2018, 1, 25), false, false));
             kørertøj.Add(new Bil("1235" , new DateTime(2018, 1, 25), false, false));
-
+            kørertøj.Add(new Bil("1235" , new DateTime(2018, 1, 25), true, false));
+          
             Kunde kunde = new Kunde(kørertøj);
 
+            // Act
             int result = kunde.TotalPris();
 
-            Assert.AreEqual(365, result);
+            // Assert
+            Assert.AreEqual(593, result);
         }
     }
 }

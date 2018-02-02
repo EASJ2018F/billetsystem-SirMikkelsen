@@ -21,7 +21,7 @@ namespace BilletLib.Tests
             int expectedResult = 240;
             // Act
             var actualResult = b1.Pris();
-            // Asset
+            // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -30,10 +30,10 @@ namespace BilletLib.Tests
         {
             // Arrange
             Bil b2 = new Bil("1234", new DateTime(2018, 2, 1),  true, false);
-            int expectedResult = 230;
+            int expectedResult = 228;
             // Act
             var actualResult = b2.Pris();
-            // Asset
+            // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -43,12 +43,12 @@ namespace BilletLib.Tests
         {
            // Arange
            Bil b3 = new Bil("1234",new DateTime(2018, 1, 27),  true, false);
-           int expectedResult = 190;
+           int expectedResult = 182;
            
            // Act
            var actualResult = b3.Pris();
            
-           // Asset
+           // Assert
            Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -62,7 +62,7 @@ namespace BilletLib.Tests
             // Act
             var actualResult = b4.Køretøj();
             
-            //  Asset
+            //  Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -96,7 +96,6 @@ namespace BilletLib.Tests
         }
 
         [TestMethod]
-
         public void GetBrobizzForBilTest()
         {
             // Arrange 
@@ -113,7 +112,6 @@ namespace BilletLib.Tests
         }
 
 
-
         [TestMethod()]
         public void PrisForØresundBilTest()
         {
@@ -122,7 +120,7 @@ namespace BilletLib.Tests
             int expectedResult = 410;
             // Act
             var actualResult = b8.Pris();
-            // Asset
+            // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -134,12 +132,11 @@ namespace BilletLib.Tests
             int expectedResult = 161;
             // Act
             var actualResult = b9.Pris();
-            // Asset
+            // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
-
         public void GetØresundForBilTest()
         {
             // Arrange 
@@ -165,7 +162,7 @@ namespace BilletLib.Tests
             // Act
             var actualResult = b11.Køretøj();
 
-            //  Asset
+            //  Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 

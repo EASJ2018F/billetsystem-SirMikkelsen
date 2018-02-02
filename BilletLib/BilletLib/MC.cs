@@ -41,15 +41,12 @@ namespace BilletLib
            return "MC";
        }
 
-
        public override int Pris()
        {
-           
            int femprocentRabat = 5 * Convert.ToInt32(2.4);
            int result = 125;
            int result2 = 210;
 
-         
            if (_brobizz == true)
            {
                result = result - femprocentRabat;
@@ -64,7 +61,6 @@ namespace BilletLib
            {
                result = 73;
            }
-
 
            return result;
         }

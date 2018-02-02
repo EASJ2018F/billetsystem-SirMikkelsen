@@ -33,7 +33,6 @@ namespace BilletLib
             _øresund = øresund;
         }
 
-
         public override string Køretøj()
         {
             if (_øresund == true)
@@ -44,13 +43,9 @@ namespace BilletLib
             return "Bil";
         }
 
-        
-
         public override int Pris()
         {
 
-            int tyveprocenRabat = 20 * Convert.ToInt32(2.4);
-            int femprocentRabat = 5 * Convert.ToInt32(2.4);
             int result = 240;
             int result2 = 410;
 
@@ -58,15 +53,14 @@ namespace BilletLib
 
             if (_dato.DayOfWeek== DayOfWeek.Saturday || _dato.DayOfWeek == DayOfWeek.Friday)
             {
-               result=  result - tyveprocenRabat;
+                result =(int) (result * 0.8);
 
             }
 
             if (_brobizz == true)
             {
-                result = result - femprocentRabat;
+                result = (int) (result * 0.95);
             }
-
 
             if (_øresund == true)
             {
@@ -81,6 +75,5 @@ namespace BilletLib
             return result;
 
         }
-   
     }
 }

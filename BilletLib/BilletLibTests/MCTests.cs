@@ -26,7 +26,6 @@ namespace BilletLib.Tests
 
         }
 
-
         [TestMethod()]
         public void KøretøjForMCTest()
         {
@@ -50,10 +49,9 @@ namespace BilletLib.Tests
             int expectedResult = 115;
             // Act
             var actualResult = mc3.Pris();
-            // Asset
+            // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
-
 
 
         //Metode jeg fandt ,som er den eneste der virker når der bliver kastet en exception
@@ -116,7 +114,6 @@ namespace BilletLib.Tests
 
 
         [TestMethod]
-
         public void ØresundBrobizzRabatForMcTest()
         {
             // Arrange
@@ -124,7 +121,7 @@ namespace BilletLib.Tests
             int expectedResult = 73;
             // Act
             var actualResult = mc8.Pris();
-            // Asset
+            // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
 
@@ -144,7 +141,6 @@ namespace BilletLib.Tests
 
         }
 
-
         [TestMethod]
         public void KøretøjForØresundMCTest()
         {
@@ -158,9 +154,6 @@ namespace BilletLib.Tests
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
-
-
-       
-
     }
+
 }
