@@ -42,7 +42,7 @@ namespace BilletLib
        }
 
 
-       public override int Pris(bool weeekend = false)
+       public override int Pris()
        {
            
            int femprocentRabat = 5 * Convert.ToInt32(2.4);

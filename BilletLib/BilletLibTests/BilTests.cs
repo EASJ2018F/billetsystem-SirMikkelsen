@@ -46,7 +46,7 @@ namespace BilletLib.Tests
            int expectedResult = 190;
            
            // Act
-           var actualResult = b3.Pris(true);
+           var actualResult = b3.Pris();
            
            // Asset
            Assert.AreEqual(expectedResult, actualResult);

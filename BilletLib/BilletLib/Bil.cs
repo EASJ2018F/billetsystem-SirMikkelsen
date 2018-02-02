@@ -46,7 +46,7 @@ namespace BilletLib
 
         
 
-        public override int Pris(bool weeekend = false)
+        public override int Pris()
         {
 
             int tyveprocenRabat = 20 * Convert.ToInt32(2.4);
@@ -54,7 +54,9 @@ namespace BilletLib
             int result = 240;
             int result2 = 410;
 
-            if (weeekend)
+            // Rettet det til dayofweek.Satuday or  dayofweek.Friday
+
+            if (_dato.DayOfWeek== DayOfWeek.Saturday || _dato.DayOfWeek == DayOfWeek.Friday)
             {
                result=  result - tyveprocenRabat;
 
@@ -66,7 +68,7 @@ namespace BilletLib
             }
 
 
-            if (_øresund)
+            if (_øresund == true)
             {
                 result = result2;
             }
