@@ -81,9 +81,6 @@ namespace BilletLib
             return result;
 
         }
-
-     
-
    
     }
 }

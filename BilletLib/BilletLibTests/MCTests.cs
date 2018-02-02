@@ -15,7 +15,7 @@ namespace BilletLib.Tests
         public void PrisForMCTest()
         {
             // Arrange 
-            MC mc1 = new MC("1234", DateTime.Today, false, false);
+            MC mc1 = new MC("1234", new DateTime(2018, 2, 1), false, false);
             int expectedResult = 125;
             
             // Act
@@ -31,7 +31,7 @@ namespace BilletLib.Tests
         public void KøretøjForMCTest()
         {
             // Arrange
-            MC mc2 = new MC("12345", DateTime.Today , false, false);
+            MC mc2 = new MC("12345", new DateTime(2018, 2, 1), false, false);
             string expectedResult = "MC";
 
             // Act
@@ -46,7 +46,7 @@ namespace BilletLib.Tests
         public void BrobizzRabatForMcTest()
         {
             // Arrange
-            MC mc3 = new MC("1234", DateTime.Today, true, false);
+            MC mc3 = new MC("1234", new DateTime(2018, 2, 1), true, false);
             int expectedResult = 115;
             // Act
             var actualResult = mc3.Pris();
@@ -64,7 +64,7 @@ namespace BilletLib.Tests
         public void NummerpladeForLangForMCException()
         {
             // Arrange
-            MC m4 = new MC("123456789", DateTime.Today, false, false);
+            MC m4 = new MC("123456789", new DateTime(2018, 2, 1), false, false);
 
         }
 
@@ -72,7 +72,7 @@ namespace BilletLib.Tests
         public void GetNummerpladeForMCTest()
         {
             // Arrange 
-            MC mc5 = new MC("1234", DateTime.Today, false, false);
+            MC mc5 = new MC("1234", new DateTime(2018, 2, 1), false, false);
             string expectedResult = "1234";
 
             // Act
@@ -88,7 +88,7 @@ namespace BilletLib.Tests
         public void GetBrobizzForMCTest()
         {
             // Arrange 
-            MC mc6 = new MC("1234", DateTime.Today, false, false);
+            MC mc6 = new MC("1234", new DateTime(2018, 2, 1), false, false);
             bool expectedResult = false;
 
             // Act
@@ -103,7 +103,7 @@ namespace BilletLib.Tests
         public void PrisForØresundMCTest()
         {
             // Arrange 
-            MC mc7 = new MC("1234", DateTime.Today, false, true);
+            MC mc7 = new MC("1234", new DateTime(2018, 2, 1), false, true);
             int expectedResult = 210;
 
             // Act
@@ -120,7 +120,7 @@ namespace BilletLib.Tests
         public void ØresundBrobizzRabatForMcTest()
         {
             // Arrange
-            MC mc8 = new MC("1234", DateTime.Today, true, true);
+            MC mc8 = new MC("1234", new DateTime(2018, 2, 1), true, true);
             int expectedResult = 73;
             // Act
             var actualResult = mc8.Pris();
@@ -133,7 +133,7 @@ namespace BilletLib.Tests
         public void GetØresundForMCTest()
         {
             // Arrange 
-            MC mc9 = new MC("1234", DateTime.Today, false, false);
+            MC mc9 = new MC("1234", new DateTime(2018, 2, 1), false, false);
             bool expectedResult = false;
 
             // Act
@@ -149,7 +149,7 @@ namespace BilletLib.Tests
         public void KøretøjForØresundMCTest()
         {
             // Arrange
-            MC mc10 = new MC("12345", DateTime.Today, false, true);
+            MC mc10 = new MC("12345", new DateTime(2018, 2, 1), false, true);
             string expectedResult = "Øresund MC";
 
             // Act

@@ -17,7 +17,7 @@ namespace BilletLib.Tests
         public void PrisForBilTest()
         {
             // Arrange
-            Bil b1 = new Bil("1234", DateTime.Today, false, false);
+            Bil b1 = new Bil("1234", new DateTime(2018,2, 1), false, false);
             int expectedResult = 240;
             // Act
             var actualResult = b1.Pris();
@@ -29,7 +29,7 @@ namespace BilletLib.Tests
         public void BrobizzRabatForBilTest()
         {
             // Arrange
-            Bil b2 = new Bil("1234", DateTime.Today, true, false);
+            Bil b2 = new Bil("1234", new DateTime(2018, 2, 1),  true, false);
             int expectedResult = 230;
             // Act
             var actualResult = b2.Pris();
@@ -42,7 +42,7 @@ namespace BilletLib.Tests
         public void WeekendRabatForBilTest()
         {
            // Arange
-           Bil b3 = new Bil("1234",DateTime.Today, true, false);
+           Bil b3 = new Bil("1234",new DateTime(2018, 1, 27),  true, false);
            int expectedResult = 190;
            
            // Act
@@ -56,7 +56,7 @@ namespace BilletLib.Tests
         public void KøretøjForBilTest()
         {
             // Arrange
-            Bil b4 = new Bil("12345", DateTime.Today, false, false);
+            Bil b4 = new Bil("12345", new DateTime(2018, 2, 1), false, false);
             string expectedResult = "Bil";
             
             // Act
@@ -75,7 +75,7 @@ namespace BilletLib.Tests
         public void NummerpladeForLangForBilException()
         {
             // Arrange
-            Bil b5 = new Bil("123456789", DateTime.Today, false, false);
+            Bil b5 = new Bil("123456789", new DateTime(2018, 2, 1), false, false);
 
         }
 
@@ -84,7 +84,7 @@ namespace BilletLib.Tests
         public void GetNummerpladeForBilTest()
         {
             // Arrange 
-            Bil b6 = new Bil("1234", DateTime.Today, false, false);
+            Bil b6 = new Bil("1234", new DateTime(2018, 2, 1), false, false);
             string expectedResult = "1234";
 
             // Act
@@ -100,7 +100,7 @@ namespace BilletLib.Tests
         public void GetBrobizzForBilTest()
         {
             // Arrange 
-            Bil b7  = new Bil("1234", DateTime.Today, false, false);
+            Bil b7  = new Bil("1234", new DateTime(2018, 2, 1), false, false);
             bool expectedResult = false;
 
             // Act
@@ -118,7 +118,7 @@ namespace BilletLib.Tests
         public void PrisForØresundBilTest()
         {
             // Arrange
-            Bil b8 = new Bil("1234", DateTime.Today, false, true);
+            Bil b8 = new Bil("1234", new DateTime(2018, 2, 1), false, true);
             int expectedResult = 410;
             // Act
             var actualResult = b8.Pris();
@@ -130,7 +130,7 @@ namespace BilletLib.Tests
         public void ØresundBrobizzRabatForBilTest()
         {
             // Arrange
-            Bil b9 = new Bil("1234", DateTime.Today, true, true);
+            Bil b9 = new Bil("1234", new DateTime(2018, 2, 1), true, true);
             int expectedResult = 161;
             // Act
             var actualResult = b9.Pris();
@@ -143,7 +143,7 @@ namespace BilletLib.Tests
         public void GetØresundForBilTest()
         {
             // Arrange 
-            Bil b10 = new Bil("1234", DateTime.Today, false, false);
+            Bil b10 = new Bil("1234", new DateTime(2018, 2, 1), false, false);
             bool expectedResult = false;
 
             // Act
@@ -159,7 +159,7 @@ namespace BilletLib.Tests
         public void KøretøjForØresundBilTest()
         {
             // Arrange
-            Bil b11 = new Bil("12345", DateTime.Today, false, true);
+            Bil b11 = new Bil("12345", new DateTime(2018, 2, 1), false, true);
             string expectedResult = "Øresund Bil";
 
             // Act
