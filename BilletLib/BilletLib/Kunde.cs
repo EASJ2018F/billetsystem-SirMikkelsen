@@ -6,10 +6,29 @@ using System.Threading.Tasks;
 
 namespace BilletLib
 {
-   //public class Kunde 
-   //{
+    public class Kunde
+    {
 
-   //  private List<>
-       
-   //}
+        private List<Kørertøj> _list;
+
+        public Kunde(List<Kørertøj> list)
+        {
+            _list = list;   
+        }
+
+        public int TotalPris()
+        {
+            int totalPris = 0;
+
+
+            foreach (var kørertøj in _list)
+            {
+                totalPris = totalPris + kørertøj.Pris();
+            }
+
+            return totalPris;
+        }
+
+
+    }
 }
