@@ -35,7 +35,7 @@ namespace BilletLib
 
         public override string Køretøj()
         {
-            if (_øresund == true)
+            if (_øresund)
             {
                 return "Øresund Bil";
             }
